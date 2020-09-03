@@ -15,10 +15,17 @@ app.get('/', (req, res) => {
     res.status(200).json('OK');
 });
 
+//Post Routes 
+
+// //Sign-Up Route 
+app.post("/sign-up/:name/:lastName/:id/:mail", (req,res) => {
+    res.send("Esta funcionando!!!");
+});
+
 //Port & listener
 
 let PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () =>{
     console.log(`Server listening on port ${PORT}...`)
-})
+});
